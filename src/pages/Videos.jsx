@@ -215,11 +215,6 @@ export default function Videos() {
         {/* ── 페이지네이션 ── */}
         <Pagination page={page} total={totalPages} onChange={handlePageChange} />
 
-        {/* ── 안내 문구 ── */}
-        <p className="text-center text-xs text-gray-400 dark:text-gray-600 mt-6">
-          영상은 YouTube 링크 공개(Unlisted) 설정을 이용합니다.
-          <code className="ml-1 text-blush-400">src/data/site.js</code>에서 youtubeId를 교체해 주세요.
-        </p>
       </div>
     </>
   )
