@@ -13,8 +13,9 @@ export default function ScrollToTopButton() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="맨 위로"
+      style={{ backgroundImage: 'linear-gradient(to bottom right, var(--t-from), var(--t-to))' }}
       className={`fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full
-        bg-gradient-to-br from-blush-500 to-coral-500 text-white shadow-lg
+        text-white shadow-lg
         flex items-center justify-center transition-all duration-300
         hover:scale-110 hover:shadow-xl
         ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}

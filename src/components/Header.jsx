@@ -26,7 +26,15 @@ function MoonIcon() {
   )
 }
 
-export default function Header({ isDark, setIsDark }) {
+const swatches = [
+  { id: 'blush', color: '#EC7A9A', name: '핑크' },
+  { id: 'azure', color: '#3892D8', name: '블루' },
+  { id: 'sage',  color: '#1AA27F', name: '민트' },
+  { id: 'plum',  color: '#8B58E8', name: '퍼플' },
+  { id: 'coral', color: '#F5465A', name: '코럴' },
+]
+
+export default function Header({ isDark, setIsDark, theme, setTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState(null)
   const [mobileExpanded, setMobileExpanded] = useState(null)
@@ -138,19 +146,19 @@ export default function Header({ isDark, setIsDark }) {
 
           {/* 우측: 컬러 팔레트 + 다크모드 토글 + 모바일 버거 */}
           <div className="flex items-center gap-1">
-            {/* 컬러 팔레트 스와치 */}
-            <div className="hidden sm:flex items-center gap-1 px-2">
-              {[
-                { color: '#F4A0B9', name: 'Blush' },
-                { color: '#60ABE5', name: 'Azure' },
-                { color: '#33BC9A', name: 'Sage' },
-                { color: '#A882F2', name: 'Plum' },
-                { color: '#FF6B7A', name: 'Coral' },
-              ].map((s) => (
-                <span
-                  key={s.name}
+            {/* 컬러 팔레트 테마 전환 */}
+            <div className="hidden sm:flex items-center gap-1.5 px-2">
+              {swatches.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => setTheme(s.id)}
                   title={s.name}
-                  className="w-4 h-4 rounded-full border-2 border-white dark:border-gray-700 shadow-sm"
+                  aria-label={`${s.name} 테마`}
+                  className={`rounded-full transition-all duration-200 ${
+                    theme === s.id
+                      ? 'w-5 h-5 ring-2 ring-offset-2 ring-gray-400 dark:ring-gray-400 scale-110'
+                      : 'w-4 h-4 hover:scale-110 opacity-70 hover:opacity-100'
+                  }`}
                   style={{ backgroundColor: s.color }}
                 />
               ))}

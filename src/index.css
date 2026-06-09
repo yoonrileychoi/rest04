@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── 테마 CSS 변수 기본값 (blush) ───────────────────────────── */
+:root {
+  --t-from:      #EC7A9A;
+  --t-to:        #FF6B7A;
+  --t-from-dark: #D95780;
+  --t-to-dark:   #DF2841;
+  --t-50:        #FFF0F5;
+  --t-100:       #FFD6E7;
+  --t-text:      #D95780;
+  --t-ring:      #F4A0B9;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -38,17 +50,22 @@
            transition-all duration-300 hover:shadow-md hover:-translate-y-0.5;
   }
 
-  /* 그라데이션 배지 버튼 */
+  /* 메인 버튼 — 테마 색상 사용 */
   .btn-primary {
     @apply inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-sm
-           bg-gradient-to-r from-blush-500 to-coral-500 text-white
-           hover:from-blush-600 hover:to-coral-600 transition-all duration-200 shadow-sm hover:shadow-md;
+           text-white transition-all duration-200 shadow-sm hover:shadow-md hover:opacity-90;
+    background-image: linear-gradient(to right, var(--t-from), var(--t-to));
   }
 
+  /* 보조 버튼 — 테마 색상 사용 */
   .btn-secondary {
     @apply inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-sm
-           border-2 border-blush-400 text-blush-600 dark:text-blush-300 dark:border-blush-500
-           hover:bg-blush-50 dark:hover:bg-blush-900/20 transition-all duration-200;
+           border-2 transition-all duration-200;
+    border-color: var(--t-ring);
+    color: var(--t-text);
+  }
+  .btn-secondary:hover {
+    background-color: var(--t-50);
   }
 
   /* 페이지 상단 헤더 */
@@ -58,14 +75,18 @@
            dark:from-gray-950 dark:via-gray-900 dark:to-gray-950;
   }
 
-  /* 탭 버튼 */
+  /* 탭 버튼 — active 상태 테마 색상 */
   .tab-btn {
     @apply px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200
-           text-gray-500 dark:text-gray-400
-           hover:text-blush-600 dark:hover:text-blush-300 hover:bg-blush-50 dark:hover:bg-blush-900/20;
+           text-gray-500 dark:text-gray-400;
+  }
+  .tab-btn:hover {
+    background-color: var(--t-50);
+    color: var(--t-text);
   }
   .tab-btn.active {
-    @apply bg-gradient-to-r from-blush-500 to-azure-500 text-white shadow-sm;
+    @apply text-white shadow-sm;
+    background-image: linear-gradient(to right, var(--t-from), var(--t-to));
   }
 
   /* YouTube 카드 반응형 컨테이너 */
@@ -79,7 +100,7 @@
   }
 }
 
-/* 스크롤바 스타일 */
+/* 스크롤바 */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { @apply bg-gray-100 dark:bg-gray-900; }
-::-webkit-scrollbar-thumb { @apply bg-blush-300 dark:bg-blush-700 rounded-full; }
+::-webkit-scrollbar-thumb { border-radius: 9999px; background-color: var(--t-ring); }
