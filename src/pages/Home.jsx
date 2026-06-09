@@ -6,7 +6,7 @@ import { subjects, stats, programs } from '../data/site.js'
 const slides = [
   {
     tag: 'AI 맞춤 학습',
-    title: 'AI가 만드는\n나만의 문제집',
+    title: 'AI와 효율적인\n학습',
     desc: '학습 데이터를 분석해 약점을 보완하는 개인 맞춤형 문제집을 즉시 생성합니다.',
     cta: { label: 'AI 문제집 보기', path: '/workbook/math' },
     ctaSub: { label: '더 알아보기', path: '/programs' },
