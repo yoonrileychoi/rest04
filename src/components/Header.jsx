@@ -136,8 +136,25 @@ export default function Header({ isDark, setIsDark }) {
             ))}
           </nav>
 
-          {/* 우측: 다크모드 토글 + 모바일 버거 */}
+          {/* 우측: 컬러 팔레트 + 다크모드 토글 + 모바일 버거 */}
           <div className="flex items-center gap-1">
+            {/* 컬러 팔레트 스와치 */}
+            <div className="hidden sm:flex items-center gap-1 px-2">
+              {[
+                { color: '#F4A0B9', name: 'Blush' },
+                { color: '#60ABE5', name: 'Azure' },
+                { color: '#33BC9A', name: 'Sage' },
+                { color: '#A882F2', name: 'Plum' },
+                { color: '#FF6B7A', name: 'Coral' },
+              ].map((s) => (
+                <span
+                  key={s.name}
+                  title={s.name}
+                  className="w-4 h-4 rounded-full border-2 border-white dark:border-gray-700 shadow-sm"
+                  style={{ backgroundColor: s.color }}
+                />
+              ))}
+            </div>
             <button
               onClick={() => setIsDark(!isDark)}
               className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
