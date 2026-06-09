@@ -10,8 +10,22 @@ export const siteInfo = {
 
 export const nav = [
   { label: '홈', path: '/' },
-  { label: 'AI 문제집', path: '/workbook/english' },
-  { label: '동영상 강의', path: '/videos/english' },
+  {
+    label: 'AI 문제집',
+    path: '/workbook/english',
+    children: [
+      { label: '영어', path: '/workbook/english' },
+      { label: '코딩', path: '/workbook/coding' },
+    ],
+  },
+  {
+    label: '동영상 강의',
+    path: '/videos/english',
+    children: [
+      { label: '영어', path: '/videos/english' },
+      { label: '코딩', path: '/videos/coding' },
+    ],
+  },
   { label: '교육 프로그램', path: '/programs' },
   {
     label: '소개',
@@ -27,6 +41,7 @@ export const nav = [
 
 export const subjects = [
   { id: 'english', label: '영어', icon: '🌏', colorFrom: 'from-sage-400', colorTo: 'to-sage-600', description: '말하기·듣기·읽기·쓰기 통합 영어 학습' },
+  { id: 'coding',  label: '코딩', icon: '💻', colorFrom: 'from-blush-400', colorTo: 'to-blush-600', description: '프로그래밍 기초부터 AI 프로젝트까지' },
 ]
 
 /* ── YouTube 동영상 데이터 ─────────────────────────────────────────────────
