@@ -136,7 +136,7 @@ export default function Videos() {
   const [page, setPage] = useState(1)
 
   const currentSubject = subjects.find((s) => s.id === subject) || subjects[0]
-  const subjectVideos = allVideos[subject] || allVideos.math
+  const subjectVideos = allVideos[subject] || allVideos.fashion
   const totalPages = Math.ceil(subjectVideos.length / VIDEOS_PER_PAGE)
   const pageVideos = subjectVideos.slice((page - 1) * VIDEOS_PER_PAGE, page * VIDEOS_PER_PAGE)
 
@@ -163,15 +163,15 @@ export default function Videos() {
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link to="/" className="hover:text-blush-500 transition-colors">홈</Link>
             <span>›</span>
-            <span className="text-gray-600 dark:text-gray-300">동영상 강의</span>
+            <span className="text-gray-600 dark:text-gray-300">스타일 영상</span>
             <span>›</span>
             <span className="text-blush-600 dark:text-blush-300 font-medium">{currentSubject.label}</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">
-            동영상 강의
+            스타일 영상
           </h1>
           <p className="text-gray-500 dark:text-gray-400">
-            전문 강사진의 핵심 강의를 언제 어디서나 시청하세요.
+            트렌드 스타일 영상을 언제 어디서나 시청하세요.
           </p>
         </div>
       </div>
@@ -197,11 +197,11 @@ export default function Videos() {
             {currentSubject.icon}
           </div>
           <div>
-            <h2 className="font-bold text-gray-900 dark:text-white">{currentSubject.label} 강의</h2>
+            <h2 className="font-bold text-gray-900 dark:text-white">{currentSubject.label} 스타일 영상</h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">{currentSubject.description}</p>
           </div>
           <span className="ml-auto text-sm text-gray-400 dark:text-gray-500">
-            총 {subjectVideos.length}개 강의
+            총 {subjectVideos.length}개 영상
           </span>
         </div>
 

@@ -5,27 +5,27 @@ import { subjects, stats, programs } from '../data/site.js'
 /* ── 히어로 슬라이드 데이터 ── */
 const slides = [
   {
-    tag: 'AI 맞춤 학습',
-    title: 'AI와 효율적인\n학습',
-    desc: '학습 데이터를 분석해 약점을 보완하는 개인 맞춤형 문제집을 즉시 생성합니다.',
-    cta: { label: 'AI 문제집 보기', path: '/workbook/math' },
+    tag: 'AI 퍼스널 쇼퍼',
+    title: 'AI가 찾아주는\n나만의 스타일',
+    desc: '취향·체형·예산을 분석해 나에게 딱 맞는 상품을 AI 퍼스널 쇼퍼가 즉시 추천합니다.',
+    cta: { label: 'AI 추천 보기', path: '/workbook/fashion' },
     ctaSub: { label: '더 알아보기', path: '/programs' },
   },
   {
-    tag: '동영상 강의',
-    title: '언제 어디서나\n전문 강의',
-    desc: '전문 강사진이 제작한 핵심 개념 강의를 PC·모바일에서 자유롭게 시청하세요.',
-    cta: { label: '강의 둘러보기', path: '/videos/math' },
-    ctaSub: { label: '과목 선택', path: '/videos/ai' },
+    tag: '스타일 영상',
+    title: '트렌드를 앞서는\n스타일 가이드',
+    desc: '패션·뷰티 트렌드 영상으로 나만의 스타일을 완성하세요.',
+    cta: { label: '영상 둘러보기', path: '/videos/fashion' },
+    ctaSub: { label: '카테고리 선택', path: '/videos/beauty' },
   },
 ]
 
 /* ── 특징 카드 ── */
 const features = [
-  { icon: '🤖', title: 'AI 문제 생성', desc: '오답 패턴을 분석해 개인 맞춤 문제를 자동 생성합니다.', color: 'from-coral-100 to-blush-100 dark:from-coral-900/20 dark:to-blush-900/20' },
-  { icon: '🎬', title: '동영상 강의', desc: '전문 강사의 핵심 강의를 언제든 반복 시청할 수 있습니다.', color: 'from-azure-100 to-plum-100 dark:from-azure-900/20 dark:to-plum-900/20' },
-  { icon: '📊', title: '학습 분석', desc: '학습 진도와 성취도를 실시간으로 분석해 리포트를 제공합니다.', color: 'from-sage-100 to-azure-100 dark:from-sage-900/20 dark:to-azure-900/20' },
-  { icon: '📱', title: '모바일 최적화', desc: '스마트폰·태블릿에서도 동일한 학습 경험을 누릴 수 있습니다.', color: 'from-plum-100 to-blush-100 dark:from-plum-900/20 dark:to-blush-900/20' },
+  { icon: '🤖', title: 'AI 스타일 분석', desc: '취향·체형·예산 데이터를 분석해 개인 맞춤형 상품을 자동 추천합니다.', color: 'from-coral-100 to-blush-100 dark:from-coral-900/20 dark:to-blush-900/20' },
+  { icon: '🎬', title: '트렌드 영상', desc: '패션·뷰티 전문가의 트렌드 영상을 언제든 반복 시청할 수 있습니다.', color: 'from-azure-100 to-plum-100 dark:from-azure-900/20 dark:to-plum-900/20' },
+  { icon: '💰', title: '가격 비교', desc: '제휴 쇼핑몰 가격을 실시간 비교해 최저가 구매를 도와드립니다.', color: 'from-sage-100 to-azure-100 dark:from-sage-900/20 dark:to-azure-900/20' },
+  { icon: '📱', title: '모바일 최적화', desc: '스마트폰·태블릿에서도 동일한 쇼핑 경험을 누릴 수 있습니다.', color: 'from-plum-100 to-blush-100 dark:from-plum-900/20 dark:to-blush-900/20' },
 ]
 
 /* ── 통계 카운터 컴포넌트 ── */
@@ -154,10 +154,10 @@ export default function Home() {
         <div className="container-wrap">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-              왜 <span className="bg-gradient-to-r from-blush-500 to-azure-500 bg-clip-text text-transparent">EduAI</span>인가요?
+              왜 <span className="bg-gradient-to-r from-blush-500 to-azure-500 bg-clip-text text-transparent">StyleAI</span>인가요?
             </h2>
             <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
-              AI 기술과 전문 교육 콘텐츠를 결합하여 모든 학생에게 최적의 학습 환경을 제공합니다.
+              AI 기술과 트렌드 큐레이션을 결합하여 모든 고객에게 최적의 쇼핑 경험을 제공합니다.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -174,20 +174,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 과목 카테고리 ────────────────────────────────────── */}
+      {/* ── 쇼핑 카테고리 ────────────────────────────────────── */}
       <section className="section-y bg-gray-50 dark:bg-gray-900/50">
         <div className="container-wrap">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-              과목별 학습
+              쇼핑 카테고리
             </h2>
-            <p className="text-gray-500 dark:text-gray-400">원하는 과목을 선택해 AI 문제집과 동영상 강의를 시작하세요.</p>
+            <p className="text-gray-500 dark:text-gray-400">원하는 카테고리를 선택해 AI 추천과 스타일 영상을 만나보세요.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {subjects.map((s) => (
               <Link
                 key={s.id}
-                to={`/videos/${s.id}`}
+                to={`/workbook/${s.id}`}
                 className="group card p-6 text-center hover:shadow-lg"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.colorFrom} ${s.colorTo} flex items-center justify-center text-3xl mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`}>
@@ -201,15 +201,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 교육 프로그램 ────────────────────────────────────── */}
+      {/* ── 서비스 프로그램 ────────────────────────────────────── */}
       <section className="section-y">
         <div className="container-wrap">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-              교육 프로그램
+              서비스 프로그램
             </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              목표에 맞는 프로그램을 선택하고 체계적으로 학습하세요.
+              나에게 맞는 프로그램을 선택하고 스마트하게 쇼핑하세요.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -249,23 +249,23 @@ export default function Home() {
         </div>
         <div className="container-wrap relative z-10 text-center text-white">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            AI와 함께하는 스마트 학습, 지금 시작하세요
+            AI 퍼스널 쇼퍼와 함께하는 스마트 쇼핑, 지금 시작하세요
           </h2>
           <p className="text-white/80 text-lg mb-10 max-w-xl mx-auto">
-            EduAI와 함께라면 어디서든 나만의 속도로 학습할 수 있습니다.
+            StyleAI와 함께라면 어디서든 나만의 취향에 맞는 쇼핑을 즐길 수 있습니다.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/workbook/math"
+              to="/workbook/fashion"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 bg-white text-blush-600 font-bold hover:bg-blush-50 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              AI 문제집 시작하기
+              AI 추천 시작하기
             </Link>
             <Link
-              to="/videos/math"
+              to="/videos/fashion"
               className="inline-flex items-center gap-2 rounded-full px-8 py-4 border-2 border-white text-white font-bold hover:bg-white/10 transition-all duration-200"
             >
-              강의 둘러보기
+              스타일 영상 보기
             </Link>
           </div>
         </div>

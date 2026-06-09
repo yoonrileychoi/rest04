@@ -3,9 +3,9 @@ import { programs, subjects } from '../data/site.js'
 
 const steps = [
   { step: '01', title: '회원가입', desc: '간단한 정보 입력으로 무료로 가입하세요.' },
-  { step: '02', title: '프로그램 선택', desc: '과목과 수준에 맞는 프로그램을 선택하세요.' },
-  { step: '03', title: 'AI 진단', desc: 'AI가 학습 수준을 진단하고 맞춤 커리큘럼을 제안합니다.' },
-  { step: '04', title: '학습 시작', desc: '문제집·강의·AI 튜터로 체계적인 학습을 시작하세요.' },
+  { step: '02', title: '취향 분석', desc: '스타일·체형·예산을 입력하면 AI가 취향을 분석합니다.' },
+  { step: '03', title: 'AI 추천', desc: 'AI가 맞춤 상품을 큐레이션하고 최저가를 비교합니다.' },
+  { step: '04', title: '쇼핑 시작', desc: '추천 상품을 확인하고 제휴 쇼핑몰에서 바로 구매하세요.' },
 ]
 
 export default function Programs() {
@@ -17,13 +17,13 @@ export default function Programs() {
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link to="/" className="hover:text-blush-500 transition-colors">홈</Link>
             <span>›</span>
-            <span className="text-blush-600 dark:text-blush-300 font-medium">교육 프로그램</span>
+            <span className="text-blush-600 dark:text-blush-300 font-medium">서비스 프로그램</span>
           </div>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">
-            교육 프로그램
+            서비스 프로그램
           </h1>
           <p className="text-gray-500 dark:text-gray-400">
-            AI 기술과 전문 강사진이 함께하는 체계적인 교육 프로그램입니다.
+            AI 기술과 트렌드 큐레이션이 함께하는 스마트 쇼핑 프로그램입니다.
           </p>
         </div>
       </div>
@@ -97,13 +97,13 @@ export default function Programs() {
           </div>
         </section>
 
-        {/* ── 과목별 바로가기 ── */}
+        {/* ── 카테고리별 바로가기 ── */}
         <section className="bg-gray-50 dark:bg-gray-900/50 rounded-3xl p-8 md:p-12">
           <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-2 text-center">
-            과목별 프로그램
+            카테고리별 프로그램
           </h2>
           <p className="text-gray-500 dark:text-gray-400 text-center mb-8">
-            원하는 과목을 선택해 맞춤 학습을 시작하세요.
+            원하는 카테고리를 선택해 맞춤 쇼핑을 시작하세요.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {subjects.map((s) => (
@@ -116,13 +116,13 @@ export default function Programs() {
                     {s.icon}
                   </div>
                   <p className="font-bold text-sm text-gray-900 dark:text-white">{s.label}</p>
-                  <p className="text-xs text-gray-400 mt-0.5">강의</p>
+                  <p className="text-xs text-gray-400 mt-0.5">영상</p>
                 </Link>
                 <Link
                   to={`/workbook/${s.id}`}
                   className="text-center py-2 rounded-xl text-xs font-semibold border border-blush-200 dark:border-blush-800 text-blush-600 dark:text-blush-300 hover:bg-blush-50 dark:hover:bg-blush-900/20 transition-colors"
                 >
-                  AI 문제집
+                  AI 추천
                 </Link>
               </div>
             ))}
@@ -138,7 +138,7 @@ export default function Programs() {
             <p className="text-gray-500 dark:text-gray-400 mb-8">
               처음 30일은 무료로 모든 프로그램을 체험할 수 있습니다.
             </p>
-            <Link to="/workbook/math" className="btn-primary text-base px-10 py-4">
+            <Link to="/workbook/fashion" className="btn-primary text-base px-10 py-4">
               무료 체험 시작하기
             </Link>
           </div>

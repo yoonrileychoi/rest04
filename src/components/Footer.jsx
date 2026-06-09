@@ -11,10 +11,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blush-400 to-azure-400 flex items-center justify-center text-white font-bold text-sm">
-                E
+                S
               </div>
               <span className="font-bold text-lg text-white">
-                Edu<span className="text-blush-400">AI</span>
+                Style<span className="text-blush-400">AI</span>
               </span>
             </div>
             <p className="text-sm leading-relaxed mb-4 max-w-xs">
@@ -24,9 +24,9 @@ export default function Footer() {
             <p className="text-xs mt-1">Tel. {siteInfo.phone} &nbsp;|&nbsp; {siteInfo.email}</p>
           </div>
 
-          {/* 과목 바로가기 */}
+          {/* 스타일 영상 바로가기 */}
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">동영상 강의</h4>
+            <h4 className="text-white text-sm font-semibold mb-4">스타일 영상</h4>
             <ul className="space-y-2">
               {subjects.map((s) => (
                 <li key={s.id}>
@@ -41,9 +41,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 문제집 바로가기 */}
+          {/* AI 추천 바로가기 */}
           <div>
-            <h4 className="text-white text-sm font-semibold mb-4">AI 문제집</h4>
+            <h4 className="text-white text-sm font-semibold mb-4">AI 추천</h4>
             <ul className="space-y-2">
               {subjects.map((s) => (
                 <li key={s.id}>
@@ -51,7 +51,7 @@ export default function Footer() {
                     to={`/workbook/${s.id}`}
                     className="text-sm hover:text-azure-300 transition-colors"
                   >
-                    {s.label} 문제집
+                    {s.label} AI 추천
                   </Link>
                 </li>
               ))}

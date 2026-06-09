@@ -8,16 +8,16 @@ const tabs = [
 ]
 
 const values = [
-  { icon: '🎯', title: '정확성', desc: 'AI가 생성하는 모든 문제는 전문 교육자의 검수를 거쳐 정확성을 보장합니다.' },
-  { icon: '🌱', title: '성장', desc: '학생 한 명 한 명의 성장을 최우선으로 생각하는 교육 철학을 고집합니다.' },
-  { icon: '🤝', title: '신뢰', desc: '학생·학부모·교사와의 신뢰를 기반으로 지속 가능한 교육 서비스를 만듭니다.' },
-  { icon: '🚀', title: '혁신', desc: '최신 AI 기술을 교육에 적용해 더 나은 학습 경험을 끊임없이 연구합니다.' },
+  { icon: '🎯', title: '정확성', desc: 'AI가 분석하는 모든 추천은 실제 구매 데이터와 검수를 거쳐 정확성을 보장합니다.' },
+  { icon: '🌱', title: '성장', desc: '고객 한 명 한 명의 스타일 성장을 최우선으로 생각하는 서비스 철학을 고집합니다.' },
+  { icon: '🤝', title: '신뢰', desc: '고객·파트너 브랜드와의 신뢰를 기반으로 지속 가능한 쇼핑 서비스를 만듭니다.' },
+  { icon: '🚀', title: '혁신', desc: '최신 AI 기술을 쇼핑에 적용해 더 나은 고객 경험을 끊임없이 연구합니다.' },
 ]
 
 const visionItems = [
-  { title: '맞춤형 교육의 대중화', desc: 'AI 기술로 모든 학생이 개인 과외 수준의 맞춤 학습을 경험하게 합니다.', icon: '🎓' },
-  { title: 'AI 교육 리더십', desc: '국내 최고의 AI 교육 플랫폼으로 에듀테크 분야를 선도합니다.', icon: '🏆' },
-  { title: '글로벌 확장', desc: '한국을 시작으로 아시아 교육 시장으로 서비스를 확대합니다.', icon: '🌏' },
+  { title: '맞춤형 쇼핑의 대중화', desc: 'AI 기술로 모든 고객이 전담 스타일리스트 수준의 맞춤 쇼핑을 경험하게 합니다.', icon: '🛍️' },
+  { title: 'AI 쇼핑 리더십', desc: '국내 최고의 AI 퍼스널 쇼퍼 플랫폼으로 커머스 분야를 선도합니다.', icon: '🏆' },
+  { title: '글로벌 확장', desc: '한국을 시작으로 아시아 패션·뷰티 시장으로 서비스를 확대합니다.', icon: '🌏' },
 ]
 
 export default function About() {
@@ -41,7 +41,7 @@ export default function About() {
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-2">
             소개
           </h1>
-          <p className="text-gray-500 dark:text-gray-400">EduAI를 소개합니다.</p>
+          <p className="text-gray-500 dark:text-gray-400">StyleAI를 소개합니다.</p>
         </div>
       </div>
 
@@ -70,21 +70,21 @@ export default function About() {
               <div>
                 <span className="text-sm font-semibold text-blush-500 mb-3 block">Company</span>
                 <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-6">
-                  AI 기반 교육의<br />새로운 기준을 만듭니다
+                  AI 퍼스널 쇼핑의<br />새로운 기준을 만듭니다
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                  EduAI는 인공지능 기술을 활용한 개인 맞춤형 교육 서비스를 제공하는 에듀테크 기업입니다.
-                  학생 한 명 한 명의 학습 패턴을 분석해 최적화된 문제와 강의를 제공합니다.
+                  StyleAI는 인공지능 기술을 활용한 개인 맞춤형 쇼핑 서비스를 제공하는 커머스테크 기업입니다.
+                  고객 한 명 한 명의 취향과 체형을 분석해 최적화된 상품을 추천합니다.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  초등학교부터 고등학교까지 전 학년을 대상으로, AI 문제집 생성과 전문 강사 동영상 강의를
-                  결합한 통합 학습 플랫폼을 운영합니다. 기술과 교육의 경계에서 더 나은 배움을 만듭니다.
+                  패션부터 뷰티까지 다양한 카테고리를 대상으로, AI 퍼스널 쇼퍼 추천과 트렌드 스타일 영상을
+                  결합한 통합 쇼핑 플랫폼을 운영합니다. 기술과 스타일의 경계에서 더 나은 쇼핑을 만듭니다.
                 </p>
                 <div className="mt-8 grid grid-cols-2 gap-4">
                   {[
                     { label: '설립연도', value: '2024년' },
                     { label: '서비스 시작', value: '2026년' },
-                    { label: '대상', value: '초·중·고 전학년' },
+                    { label: '대상', value: '패션·뷰티 전체' },
                     { label: '위치', value: '서울 강남구' },
                   ].map((item) => (
                     <div key={item.label} className="bg-gray-50 dark:bg-gray-900 rounded-xl p-4">
@@ -97,8 +97,8 @@ export default function About() {
               <div className="relative">
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-blush-200 to-azure-200 dark:from-blush-900/40 dark:to-azure-900/40 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-8xl mb-4">🎓</div>
-                    <p className="text-2xl font-extrabold text-gray-800 dark:text-white">EduAI</p>
+                    <div className="text-8xl mb-4">🛍️</div>
+                    <p className="text-2xl font-extrabold text-gray-800 dark:text-white">StyleAI</p>
                     <p className="text-gray-500 dark:text-gray-400">{siteInfo.tagline}</p>
                   </div>
                 </div>
@@ -132,11 +132,11 @@ export default function About() {
             <div className="text-center max-w-2xl mx-auto">
               <span className="text-sm font-semibold text-azure-500 mb-3 block">Vision</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
-                모든 학생에게 최고의<br />교육 기회를
+                모든 고객에게 최고의<br />쇼핑 경험을
               </h2>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                EduAI의 비전은 AI 기술을 통해 교육의 불평등을 해소하고,
-                모든 학생이 개인의 잠재력을 최대한 발휘할 수 있는 환경을 만드는 것입니다.
+                StyleAI의 비전은 AI 기술을 통해 쇼핑의 불편함을 해소하고,
+                모든 고객이 자신의 스타일을 자유롭게 표현할 수 있는 환경을 만드는 것입니다.
               </p>
             </div>
 
@@ -155,10 +155,10 @@ export default function About() {
                 <div className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-white blur-3xl" />
               </div>
               <h3 className="text-2xl md:text-3xl font-extrabold mb-4 relative z-10">
-                "AI로 완성하는 나의 학습 여정"
+                "AI가 완성하는 나만의 쇼핑"
               </h3>
               <p className="text-white/80 max-w-lg mx-auto relative z-10">
-                단순한 문제 풀이를 넘어, 학생 스스로 성장하는 능력을 키우는 것이 EduAI의 궁극적인 목표입니다.
+                단순한 상품 나열을 넘어, 고객 스스로 자신의 스타일을 발견하는 것이 StyleAI의 궁극적인 목표입니다.
               </p>
             </div>
           </div>

@@ -8,7 +8,7 @@ const plans = [
     price: '9,900',
     period: '월',
     colorClass: 'from-azure-400 to-plum-500',
-    features: ['동영상 강의 1과목', 'AI 문제집 월 3회', '학습 리포트', '모바일 앱'],
+    features: ['AI 추천 1카테고리', '스타일 영상 월 5회', '가격 비교', '모바일 앱'],
     highlight: false,
   },
   {
@@ -16,7 +16,7 @@ const plans = [
     price: '19,900',
     period: '월',
     colorClass: 'from-blush-500 to-coral-500',
-    features: ['동영상 강의 전과목', 'AI 문제집 무제한', 'AI 튜터링', '학습 리포트', '모바일 앱', 'PDF 다운로드'],
+    features: ['AI 추천 전카테고리', '스타일 영상 무제한', 'AI 스타일리스트', '가격 비교·알림', '모바일 앱', '쇼핑 리포트'],
     highlight: true,
     badge: '인기',
   },
@@ -70,7 +70,7 @@ export default function Guide() {
             이용 안내
           </h1>
           <p className="text-gray-500 dark:text-gray-400">
-            EduAI 서비스 이용 방법과 요금제를 안내합니다.
+            StyleAI 서비스 이용 방법과 요금제를 안내합니다.
           </p>
         </div>
       </div>
@@ -83,9 +83,9 @@ export default function Guide() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { step: '1', icon: '📝', title: '회원가입 & 진단', desc: '간단한 회원가입 후 AI 학습 수준 진단을 받으세요. 3분 내로 완료됩니다.' },
-              { step: '2', icon: '📚', title: '콘텐츠 선택', desc: '원하는 과목의 동영상 강의와 AI 문제집을 선택하세요. 수준별로 추천해 드립니다.' },
-              { step: '3', icon: '🚀', title: '학습 시작', desc: 'AI 튜터와 함께 맞춤 학습을 시작하세요. 언제 어디서나 학습 가능합니다.' },
+              { step: '1', icon: '📝', title: '회원가입 & 취향 분석', desc: '간단한 회원가입 후 AI 취향 분석을 받으세요. 3분 내로 완료됩니다.' },
+              { step: '2', icon: '🛍️', title: '카테고리 선택', desc: '원하는 카테고리의 AI 추천과 스타일 영상을 선택하세요. 맞춤으로 추천해 드립니다.' },
+              { step: '3', icon: '🚀', title: '쇼핑 시작', desc: 'AI 스타일리스트와 함께 맞춤 쇼핑을 시작하세요. 언제 어디서나 이용 가능합니다.' },
             ].map((item) => (
               <div key={item.step} className="card p-8 text-center relative">
                 <div className="absolute top-6 right-6 w-8 h-8 rounded-full bg-gradient-to-br from-blush-100 to-azure-100 dark:from-blush-900/30 dark:to-azure-900/30 flex items-center justify-center text-sm font-bold text-blush-600 dark:text-blush-300">
@@ -176,7 +176,7 @@ export default function Guide() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:contact@eduai.kr"
+              href="mailto:contact@styleai.kr"
               className="btn-primary"
             >
               이메일 문의
