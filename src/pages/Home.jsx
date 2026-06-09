@@ -37,11 +37,11 @@ function StatCard({ label, value, desc, delay }) {
   }, [delay])
   return (
     <div className={`text-center transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      <p className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blush-500 to-azure-500 bg-clip-text text-transparent">
+      <p className="text-4xl md:text-5xl font-extrabold text-white drop-shadow">
         {value}
       </p>
-      <p className="mt-2 font-semibold text-gray-800 dark:text-gray-100">{label}</p>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{desc}</p>
+      <p className="mt-2 font-bold text-white mt-1">{label}</p>
+      <p className="text-sm text-white/80 mt-1">{desc}</p>
     </div>
   )
 }
