@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* 공통 수평 패딩 */
+  .section-x {
+    @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+
+  /* 섹션 수직 여백 */
+  .section-y {
+    @apply py-16 md:py-24;
+  }
+
+  /* 컨테이너 래퍼 */
+  .container-wrap {
+    @apply max-w-container mx-auto section-x;
+  }
+
+  /* 과목 배지 */
+  .subject-badge {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+
+  /* 카드 공통 */
+  .card {
+    @apply bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800
+           transition-all duration-300 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  /* 그라데이션 배지 버튼 */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-sm
+           bg-gradient-to-r from-blush-500 to-coral-500 text-white
+           hover:from-blush-600 hover:to-coral-600 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold text-sm
+           border-2 border-blush-400 text-blush-600 dark:text-blush-300 dark:border-blush-500
+           hover:bg-blush-50 dark:hover:bg-blush-900/20 transition-all duration-200;
+  }
+
+  /* 페이지 상단 헤더 */
+  .page-hero {
+    @apply pt-28 md:pt-36 pb-12 md:pb-16 bg-gradient-to-br
+           from-blush-50 via-white to-azure-50
+           dark:from-gray-950 dark:via-gray-900 dark:to-gray-950;
+  }
+
+  /* 탭 버튼 */
+  .tab-btn {
+    @apply px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200
+           text-gray-500 dark:text-gray-400
+           hover:text-blush-600 dark:hover:text-blush-300 hover:bg-blush-50 dark:hover:bg-blush-900/20;
+  }
+  .tab-btn.active {
+    @apply bg-gradient-to-r from-blush-500 to-azure-500 text-white shadow-sm;
+  }
+
+  /* YouTube 카드 반응형 컨테이너 */
+  .video-ratio {
+    @apply relative w-full overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800;
+    padding-top: 56.25%;
+  }
+  .video-ratio iframe,
+  .video-ratio > * {
+    @apply absolute inset-0 w-full h-full;
+  }
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-gray-100 dark:bg-gray-900; }
+::-webkit-scrollbar-thumb { @apply bg-blush-300 dark:bg-blush-700 rounded-full; }
