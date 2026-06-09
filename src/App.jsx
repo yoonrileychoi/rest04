@@ -21,9 +21,9 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/videos" element={<Navigate to="/videos/math" replace />} />
+          <Route path="/videos" element={<Navigate to="/videos/english" replace />} />
           <Route path="/videos/:subject" element={<Videos />} />
-          <Route path="/workbook" element={<Navigate to="/workbook/math" replace />} />
+          <Route path="/workbook" element={<Navigate to="/workbook/english" replace />} />
           <Route path="/workbook/:subject" element={<Workbook />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/about" element={<Navigate to="/about/company" replace />} />

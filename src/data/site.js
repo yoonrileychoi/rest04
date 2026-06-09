@@ -10,28 +10,8 @@ export const siteInfo = {
 
 export const nav = [
   { label: '홈', path: '/' },
-  {
-    label: 'AI 문제집',
-    path: '/workbook/math',
-    children: [
-      { label: '수학', path: '/workbook/math' },
-      { label: '영어', path: '/workbook/english' },
-      { label: '과학', path: '/workbook/science' },
-      { label: 'AI 활용', path: '/workbook/ai' },
-      { label: '코딩', path: '/workbook/coding' },
-    ],
-  },
-  {
-    label: '동영상 강의',
-    path: '/videos/math',
-    children: [
-      { label: '수학', path: '/videos/math' },
-      { label: '영어', path: '/videos/english' },
-      { label: '과학', path: '/videos/science' },
-      { label: 'AI 활용', path: '/videos/ai' },
-      { label: '코딩', path: '/videos/coding' },
-    ],
-  },
+  { label: 'AI 문제집', path: '/workbook/english' },
+  { label: '동영상 강의', path: '/videos/english' },
   { label: '교육 프로그램', path: '/programs' },
   {
     label: '소개',
@@ -46,11 +26,7 @@ export const nav = [
 ]
 
 export const subjects = [
-  { id: 'math',    label: '수학',    icon: '📐', colorFrom: 'from-azure-400',  colorTo: 'to-azure-600',  description: 'AI 기반 수학 학습으로 개념부터 응용까지' },
-  { id: 'english', label: '영어',    icon: '🌏', colorFrom: 'from-sage-400',   colorTo: 'to-sage-600',   description: '말하기·듣기·읽기·쓰기 통합 영어 학습' },
-  { id: 'science', label: '과학',    icon: '🔬', colorFrom: 'from-plum-400',   colorTo: 'to-plum-600',   description: '실험과 탐구 중심의 과학 교육' },
-  { id: 'ai',      label: 'AI 활용', icon: '🤖', colorFrom: 'from-coral-400',  colorTo: 'to-coral-600',  description: 'AI 도구 활용법과 미래 기술 교육' },
-  { id: 'coding',  label: '코딩',    icon: '💻', colorFrom: 'from-blush-400',  colorTo: 'to-blush-600',  description: '프로그래밍 기초부터 프로젝트까지' },
+  { id: 'english', label: '영어', icon: '🌏', colorFrom: 'from-sage-400', colorTo: 'to-sage-600', description: '말하기·듣기·읽기·쓰기 통합 영어 학습' },
 ]
 
 /* ── YouTube 동영상 데이터 ─────────────────────────────────────────────────
