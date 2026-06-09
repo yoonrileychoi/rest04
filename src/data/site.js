@@ -86,12 +86,14 @@ export const videos = {
     { id: 'a6', title: 'AI 활용 글쓰기와 창작', youtubeId: 'YOUTUBE_ID_HERE', level: '중2-고3', description: 'AI와 함께하는 창의적 글쓰기 기법을 배웁니다.', date: '2026-06-03', views: '1.1만' },
   ],
   coding: [
-    { id: 'c1', title: '파이썬 입문 — 기초 문법', youtubeId: 'YOUTUBE_ID_HERE', level: '중1-고3', description: '파이썬 기본 문법과 자료형을 처음부터 배웁니다.', date: '2026-05-07', views: '4.5만' },
-    { id: 'c2', title: '스크래치로 배우는 알고리즘', youtubeId: 'YOUTUBE_ID_HERE', level: '초4-중2', description: '블록 코딩으로 알고리즘의 개념을 즐겁게 익힙니다.', date: '2026-05-13', views: '2.1만' },
-    { id: 'c3', title: '파이썬 — 데이터 분석 기초', youtubeId: 'YOUTUBE_ID_HERE', level: '고1-3', description: 'pandas와 matplotlib로 데이터를 분석하고 시각화합니다.', date: '2026-05-17', views: '1.3만' },
-    { id: 'c4', title: '웹 개발 기초 — HTML/CSS', youtubeId: 'YOUTUBE_ID_HERE', level: '중3-고3', description: '웹 페이지 만들기 첫걸음을 내딛습니다.', date: '2026-05-23', views: '9.8천' },
-    { id: 'c5', title: '자바스크립트 기초', youtubeId: 'YOUTUBE_ID_HERE', level: '고1-3', description: '동적 웹 페이지를 만드는 자바스크립트를 배웁니다.', date: '2026-05-30', views: '7.2천' },
-    { id: 'c6', title: 'AI 코딩 — 파이썬으로 챗봇 만들기', youtubeId: 'YOUTUBE_ID_HERE', level: '고2-3', description: '파이썬과 AI API로 나만의 챗봇을 개발합니다.', date: '2026-06-04', views: '1.6만' },
+    { id: 'c1', title: '코딩 1도 모르지만 AI로 개발하고 싶은 분들 필수 시청', youtubeId: 'ollMbEOzofc', level: '입문', description: '바이브코딩 기초와 AI 보조 개발 방법을 처음부터 설명합니다.', date: '2025-04-01', views: '-' },
+    { id: 'c2', title: 'AI 시대, 코딩을 배워야 할까?', youtubeId: 'E1bvBcpPKeQ', level: '전체', description: 'AI 시대에 코딩 학습의 필요성과 개발자의 미래를 논의합니다.', date: '2024-01-01', views: '-' },
+    { id: 'c3', title: '말만 하면 AI가 코딩까지 해줍니다', youtubeId: 'CHxzLiRRdMg', level: '전체', description: 'AI 자동 코딩 시대, IT 개발자의 변화와 대응 방법을 소개합니다.', date: '2024-01-01', views: '-' },
+    { id: 'c4', title: '이제는 누구나 코딩할 수 있는 이유 — ChatGPT·Claude·Cursor', youtubeId: 'yfshAt06Eg8', level: '입문', description: 'AI 도구를 활용해 비전문가도 코딩할 수 있는 방법을 알려줍니다.', date: '2024-01-01', views: '-' },
+    { id: 'c5', title: 'AI로 바이브코딩 잘 하는 방법', youtubeId: '6fUjjQwIZrs', level: '입문', description: '인공지능을 활용한 바이브코딩 실전 노하우를 공유합니다.', date: '2025-01-01', views: '-' },
+    { id: 'c6', title: 'ChatGPT + Claude 연합 AI 코딩 완성 — 비전문가도 OK', youtubeId: 'iKov8f3HDWI', level: '입문', description: 'ChatGPT와 Claude를 함께 활용하는 최강 AI 코딩 방법을 소개합니다.', date: '2025-01-01', views: '-' },
+    { id: 'c7', title: 'AI 코딩, 누구나 할 수 있어요 — Grok·ChatGPT', youtubeId: 'Eci-iQ1TW-8', level: '입문', description: 'Grok, ChatGPT를 이용한 쉬운 AI 코딩 방법을 설명합니다.', date: '2025-01-01', views: '-' },
+    { id: 'c8', title: '2025 AI 프로그래밍 공부 순서 완벽 로드맵', youtubeId: '0zL3EVl37Cs', level: '전체', description: 'AI 프로그래밍을 체계적으로 공부하는 순서와 방법을 안내합니다.', date: '2025-03-01', views: '-' },
   ],
 }
 
