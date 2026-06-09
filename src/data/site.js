@@ -53,11 +53,11 @@ export const videos = {
     { id: 'f1', title: '"AI가 맞춤옷 골라준다"…패션업계 새바람', youtubeId: 'KgNvEvTibEo', level: '전체', description: 'AI가 취향과 체형을 분석해 맞춤 패션을 추천하는 패션업계의 새로운 AI 서비스를 소개합니다.', date: '2024-09-05', views: '-' },
     { id: 'f2', title: '2025 패션 트렌드 및 추천 아이템 3가지', youtubeId: '6DW1lrSxgjM', level: '전체', description: '2025년 패션 트렌드 키워드와 꼭 갖춰야 할 추천 아이템 3가지를 소개합니다.', date: '2025-01-24', views: '-' },
     { id: 'f3', title: '2025 하반기 패션 트렌드 & 나만의 스타일', youtubeId: '5BjJd2tUbeU', level: '전체', description: '2025년 하반기 패션 트렌드와 개인 스타일 방향을 제시합니다.', date: '2025-07-01', views: '-' },
-    { id: 'f4', title: '패션 전문가들이 추천하는 2025 뜨는 브랜드 TOP5', youtubeId: '2mpleiubWLc', level: '전체', description: '패션 전문가들이 선정한 2025년 주목할 브랜드 TOP5를 소개합니다.', date: '2025-01-09', views: '-' },
+    { id: 'f4', title: '2025년 AI 구매대행 프로그램 실전 A-Z 시연', youtubeId: 'btXCGfcXRUg', level: '전체', description: 'AI를 활용한 구매대행 프로그램의 실전 사용법을 A부터 Z까지 시연합니다.', date: '2025-01-01', views: '-' },
     { id: 'f5', title: '쇼핑도 AI 시대 — 블랙프라이데이의 조용한 주인공', youtubeId: '84C-pDjt0Cg', level: '전체', description: 'OpenAI·Google·Amazon의 AI 쇼핑 어시스턴트가 블랙프라이데이 소비 트렌드를 바꾸고 있습니다.', date: '2025-12-01', views: '-' },
     { id: 'f6', title: '[MWC25] 퍼스널 AI 에이전트의 놀라운 발전', youtubeId: 'CbpD29ikTik', level: '전체', description: 'MWC 2025에서 공개된 퍼스널 AI 에이전트 기술과 맞춤형 쇼핑 혁신을 소개합니다.', date: '2025-03-09', views: '-' },
     { id: 'f7', title: '패션 AI 솔루션 — NC AI VARCO Art Fashion', youtubeId: 'R1J9P-rbqhI', level: '전체', description: '패션 디자이너와 마케터를 위한 AI 패션 콘텐츠 자동 생성 서비스를 소개합니다.', date: '2025-04-16', views: '-' },
-    { id: 'f8', title: '네이버·카카오, AI로 결제까지…플랫폼 쇼핑 혁신', youtubeId: '1J_wH4fE1B4', level: '전체', description: '국내 주요 플랫폼이 AI로 쇼핑과 결제를 통합하는 새로운 커머스 시대를 분석합니다.', date: '2026-02-11', views: '-' },
+    { id: 'f8', title: '포엣코어가 진짜 뜬 이유 — 비싸지 않아도 멋내는 시대', youtubeId: 'vrezqYa9WQg', level: '전체', description: '소비 패턴 변화가 만들어낸 포엣코어 트렌드와 가성비 패션의 새로운 시대를 분석합니다.', date: '2025-01-01', views: '-' },
   ],
   beauty: [
     { id: 'b1', title: '[CES 2026] Skinsight — AI 기반 피부 분석 솔루션', youtubeId: 'b-PhgLFCHPw', level: '전체', description: 'Amorepacific과 MIT가 공동 개발한 AI 피부 분석 기술을 CES 2026에서 소개합니다.', date: '2026-01-01', views: '-' },
@@ -66,7 +66,7 @@ export const videos = {
     { id: 'b4', title: '2025 오송 화장품·뷰티산업 엑스포 공식 영상', youtubeId: '0hOFZlrL-mI', level: '전체', description: '2025년 K-뷰티 트렌드와 최신 뷰티 제품을 한눈에 볼 수 있는 엑스포 공식 영상입니다.', date: '2025-01-01', views: '-' },
     { id: 'b5', title: '바이오미믹 AI 크림 — 민감성 피부 장벽 강화', youtubeId: '97irpVpyF7s', level: '민감성', description: 'AI 기술을 접목한 피부 장벽 강화 성분의 스킨케어 제품을 소개합니다.', date: '2024-06-01', views: '-' },
     { id: 'b6', title: '퍼스널 쇼퍼 — 고객 맞춤형 쇼핑 도우미의 모든 것', youtubeId: 'sgQBBhn88X4', level: '전체', description: '퍼스널 쇼퍼의 역할과 AI 시대 맞춤형 쇼핑 도우미 서비스를 심층 소개합니다.', date: '2023-12-27', views: '-' },
-    { id: 'b7', title: '데일리 스타일링 추천 — 오늘의 패션·뷰티', youtubeId: 'Sy2UdZsUgSE', level: '전체', description: '트렌드 아이템을 활용한 데일리 패션·뷰티 스타일링 추천 영상입니다.', date: '2026-04-18', views: '-' },
+    { id: 'b7', title: 'GRWM — 자연스러운 데일리 메이크업 루틴', youtubeId: 'VWOKvqkCeak', level: '전체', description: '매일 따라하기 쉬운 자연스러운 데일리 메이크업 루틴을 소개합니다.', date: '2026-03-01', views: '-' },
     { id: 'b8', title: '쇼핑을 바꾸는 AI — 스마트 쇼핑의 새로운 시대', youtubeId: 'yOCyOQsCEJc', level: '전체', description: 'AI 퍼스널 쇼퍼가 쇼핑 습관을 어떻게 바꾸는지 실제 사례로 보여주는 영상입니다.', date: '2026-06-01', views: '-' },
   ],
 }
