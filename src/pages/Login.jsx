@@ -41,7 +41,7 @@ export default function Login() {
       if (error) {
         setError(error.message.includes('already') ? '이미 사용 중인 이메일입니다.' : error.message)
       } else {
-        setMessage('가입 확인 이메일을 보냈습니다. 이메일을 확인해주세요.')
+        navigate('/')
       }
     }
     setLoading(false)
