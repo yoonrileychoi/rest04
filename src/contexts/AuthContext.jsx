@@ -47,7 +47,7 @@ export function AuthProvider({ children }) {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { nickname, name: nickname } },
+      options: { data: { nickname, full_name: nickname } },
     })
     return { data, error }
   }
