@@ -25,11 +25,20 @@ export function AuthProvider({ children }) {
   }, [])
 
   async function fetchRole(userId) {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from('profiles')
       .select('role')
       .eq('id', userId)
       .single()
+
+    if (error?.code === 'PGRST116') {
+      const { data: { user } } = await supabase.auth.getUser()
+      const meta = user?.user_metadata ?? {}
+      const nickname = meta.nickname || meta.full_name || meta.name
+        || (user?.email ? user.email.split('@')[0] : '사용자')
+      await supabase.from('profiles').insert({ id: userId, nickname })
+    }
+
     setIsAdmin(data?.role === 'admin')
     setLoading(false)
   }
