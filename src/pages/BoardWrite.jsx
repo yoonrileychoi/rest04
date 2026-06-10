@@ -52,7 +52,7 @@ export default function BoardWrite() {
     setLoading(true)
     setError('')
 
-    const nickname = user.user_metadata?.nickname || user.email?.split('@')[0] || '익명'
+    const nickname = user.user_metadata?.nickname || user.user_metadata?.full_name || user.user_metadata?.name || user.email?.split('@')[0] || '익명'
 
     if (isEdit) {
       const { error } = await supabase
