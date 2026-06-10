@@ -87,10 +87,10 @@ export default function Header({ isDark, setIsDark, theme, setTheme }) {
           {/* 로고 */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blush-400 to-azure-400 flex items-center justify-center text-white font-bold text-sm select-none">
-              E
+              S
             </div>
             <span className="font-bold text-lg text-gray-900 dark:text-white leading-none">
-              Edu<span className="text-blush-500">AI</span>
+              Style<span className="text-blush-500">AI</span>
             </span>
           </Link>
 
