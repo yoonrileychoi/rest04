@@ -37,6 +37,7 @@ export const nav = [
     ],
   },
   { label: '이용 안내', path: '/guide' },
+  { label: '게시판', path: '/board' },
 ]
 
 export const subjects = [

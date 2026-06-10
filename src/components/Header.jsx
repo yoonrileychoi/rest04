@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { nav } from '../data/site.js'
+import { useAuth } from '../contexts/AuthContext.jsx'
 
 function SunIcon() {
   return (
@@ -40,7 +41,9 @@ export default function Header({ isDark, setIsDark, theme, setTheme }) {
   const [mobileExpanded, setMobileExpanded] = useState(null)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const timerRef = useRef(null)
+  const { user, signOut } = useAuth()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -170,6 +173,23 @@ export default function Header({ isDark, setIsDark, theme, setTheme }) {
             >
               {isDark ? <SunIcon /> : <MoonIcon />}
             </button>
+
+            {/* 로그인/로그아웃 버튼 */}
+            {user ? (
+              <button
+                onClick={async () => { await signOut(); navigate('/') }}
+                className="hidden sm:block px-3 py-1.5 rounded-lg text-xs font-medium text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border border-gray-200 dark:border-gray-700"
+              >
+                로그아웃
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="hidden sm:block px-3 py-1.5 rounded-lg text-xs font-medium bg-blush-500 hover:bg-blush-600 text-white transition-colors"
+              >
+                로그인
+              </Link>
+            )}
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
