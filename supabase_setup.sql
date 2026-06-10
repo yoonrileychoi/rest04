@@ -26,7 +26,13 @@ begin
   insert into profiles (id, nickname)
   values (
     new.id,
-    coalesce(new.raw_user_meta_data->>'nickname', split_part(new.email, '@', 1))
+    coalesce(
+      new.raw_user_meta_data->>'nickname',
+      new.raw_user_meta_data->>'full_name',
+      new.raw_user_meta_data->>'name',
+      split_part(coalesce(new.email, ''), '@', 1),
+      '사용자'
+    )
   );
   return new;
 end;
